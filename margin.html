@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>doc</title>
+
+	<style type="text/css">
+		/*
+			shorthand									
+		*/
+
+		p{
+			margin:  10px 9px 8px 7px;
+			/* top: 10, right: 9, bottom: 8, left: 7  */
+
+			margin: 10px 9px 8px;
+			/* top: 10, [left and right]: 9, bottom: 8;*/
+
+			margin: 10px 5px;
+			/*[top and bottom]:10px, [left and right]:5px*/
+
+			margin: 8px;
+			/*all: 8px*/
+		}
+
+		/*collapsing (not makes inside of div with display: flex;)*/
+		div.tests{
+			border: 1px solid #555;
+		}
+
+		div.test-collapsing{
+			height: 50px;
+			width: 50px;
+			margin: 20px; /*margin-left plus margin-rigth = 40 but margin-top and bottom is together with 20*/
+			border: 2px solid #222;
+		}
+
+	</style>
+</head>
+<body>
+	<p>
+		teeest margin
+	</p>
+
+	<div class="tests">
+		<div class="row">
+			<div class="test-collapsing">
+				one
+			</div>
+			<div class="test-collapsing">
+				two
+			</div>
+			<div style="display: inline;" class="test-collapsing">
+				three
+			</div>
+			<div style="display: inline;" class="test-collapsing">
+				four
+			</div>
+		</div>
+		
+	</div>
+
+</body>
+</html>
